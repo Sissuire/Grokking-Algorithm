@@ -18,6 +18,6 @@ Note:
 
 =====================================================
 
-2018-6-29: This is the first day, upate Chapter_1
+2018-6-29: This is the first day, update Chapter_1 & Chapter_2
 
 more are on the way
