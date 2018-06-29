@@ -15,3 +15,9 @@ Code for fun is this theme.
 
 Note:
 - Code are implemented with Visual Studio 2013 on Windows 10, and possible mistakes can be occur with GCC complier on Linux. Just modified by yourself.
+
+=====================================================
+
+2018-6-29: This is the first day, upate Chapter_1
+
+more are on the way
