@@ -2,7 +2,34 @@
 
 namespace GrokkingAlgorithm
 {
-	void SelectionSort(int *array, int *sortedArray, int num)
+	void SelectionSort(int *array, int num)
+	{
+		int val = INT_MAX;
+		int pos = 0;
+		int j, counter = 0;
+		int temp;
+
+		while (counter!=num)
+		{
+			val = INT_MAX;
+			for (j = counter; j != num; ++j)
+			{
+				if (val > array[j])
+				{
+					val = array[j];
+					pos = j;
+				}
+			}
+
+			temp = array[counter];
+			array[counter] = val;
+			array[pos] = temp;
+
+			++counter;
+		}
+	}
+
+	void Ch2_SelectionSortInArray(int *array, int *sortedArray, int num)
 	{
 		/* Selection Sort for array rather than list
 		*  
@@ -54,6 +81,11 @@ namespace GrokkingAlgorithm
 		*  
 		*  Why choose list<int> ?
 		*		Fairly for quickly deleting element
+		*
+		*  Note:
+		*		- The idea in this book is to generate a new array/list and delete the original one. 
+		*		- My preference is to swap data as "SelectionSort" function on the beginning of this file.
+		*
 		*/
 
 		int val;
@@ -77,12 +109,12 @@ namespace GrokkingAlgorithm
 
 		/* 
 		// ====================================== 
-		// test for SelectionSort(int *array, int *sortedArray, int num)
+		// test for Ch2_SelectionSortInArray(int *array, int *sortedArray, int num)
 		// ======================================
 
 		int a[5] = { 5, 2, 6, 3, 8 };
 		int *b = (int *)malloc(sizeof(int) * 5);
-		SelectionSort(a, b, 5);
+		Ch2_SelectionSortInArray(a, b, 5);
 
 		std::cout << "Original List:" << std::endl;
 		for (int i = 0; i != 5; ++i)
@@ -92,6 +124,25 @@ namespace GrokkingAlgorithm
 		std::cout << b[i] << "\t";
 		std::cout << std::endl;
 		free(b);
+		*/
+
+		/*
+		// ======================================
+		// test for SelectionSortInArray(int *array, int num) | A preferable one for me
+		// ======================================
+
+		int a[5] = { 5, 2, 6, 3, 8 };
+
+		std::cout << "Original List:" << std::endl;
+		for (int i = 0; i != 5; ++i)
+		std::cout << a[i] << "\t";
+
+		SelectionSort(a, 5);
+
+		std::cout << std::endl << "Sorted List:" << std::endl;
+		for (int i = 0; i != 5; ++i)
+		std::cout << a[i] << "\t";
+		std::cout << std::endl;
 		*/
 
 		return;

@@ -12,7 +12,7 @@ int main()
 	}
 	*/
 
-	/* 
+	 
 	// ==================== demo Chapter 2 -- Selection Sort ========================
 	std::list<int> lst = { 5, 3, 6, 2, 10 };
 	std::list<int> sortedLst;
@@ -26,13 +26,15 @@ int main()
 	for (auto &elem : sortedLst)
 		std::cout << elem << "\t";
 	std::cout << std::endl;
-	*/
+	
 
+	/*
 	// ==================== demo Chapter 3 -- Recuresion ============================
 	int num;
 	while (std::cin >> num)
 	{
 		std::cout << "Fibonacci (" << num << " ) is " << GrokkingAlgorithm::Ch3_Recursion(num) << std::endl;
 	}
+	*/
 	return 0;
 }
