@@ -26,7 +26,7 @@ namespace GrokkingAlgorithm
 		/* Binary Search
 		*  
 		*  Params:
-		*		- ascend_array£¬ int pointer for an ascend-sorted array
+		*		- ascend_arrayÂ£Â¬ int pointer for an ascend-sorted array
 		*		- num, length of input array
 		*		- val, value to be searched.
 		*	
@@ -35,7 +35,7 @@ namespace GrokkingAlgorithm
 		*/
 
 		/* recursive */
-		return InBinarySearch(ascend_array, 0, num - 1, val);
+		// return InBinarySearch(ascend_array, 0, num - 1, val);
 
 		/* loop */
 		int pos1 = 0, pos2 = num - 1;
