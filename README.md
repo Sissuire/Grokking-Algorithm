@@ -9,7 +9,7 @@ Thank [Yuci](https://github.com/yucicheung) for the book, and an english PDF fil
 
 Since its simpleness and briefness, the implementation code here is not strictly correct.
 
-Code for fun is this theme.
+Also I did not see any of the official source code. So, this is not a c/cpp implementation of the official python source code. Anyway, coding for fun is the theme.
 
 =====================================================
 
