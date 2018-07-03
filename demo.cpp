@@ -78,8 +78,13 @@ int main()
 	std::cout << std::endl;
 	*/
 
+	/*
 	// ==================== demo Chapter 5 -- Hash Table ============================
 	GrokkingAlgorithm::Ch5_HashTable();
+	*/
+
+	// ==================== demo Chapter 6 -- Breadth First Search ==================
+	GrokkingAlgorithm::Ch6_BreadthFirstSearch();
 
 	return 0;
 }

@@ -4,7 +4,10 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <queue>
 #include <list>
+#include <map>
+#include <set>
 
 namespace GrokkingAlgorithm
 {
@@ -22,6 +25,9 @@ namespace GrokkingAlgorithm
 
 	void Ch4_MergeSort(int *array, int num);
 
+	void Ch5_HashTable();
+
+	bool Ch6_BreadthFirstSearch();
 };
 
 #endif
