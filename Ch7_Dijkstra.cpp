@@ -50,19 +50,11 @@ namespace GrokkingAlgorithm
 		if (graph.empty())
 			return ret;
 
-		/* start from "start" */
-		std::map<std::string, int > neighbor = graph["start"];
+		std::map<std::string, int > neighbor;
 		std::map<std::string, int>::iterator iter_neighbor;
 
-		/* create cost & parent */
-		cost["fin"] = INT_MAX;
-		parent["fin"] = "";
-		for (iter_neighbor = neighbor.begin(); iter_neighbor != neighbor.end(); ++iter_neighbor)
-		{
-			cost[iter_neighbor->first] = iter_neighbor->second;
-			parent[iter_neighbor->first] = "start";
-		}	
-		++counter["start"];
+		/* initialize */
+		cost["start"] = 0;
 
 		std::map<std::string, int>::iterator iter_minCost;
 		iter_minCost = find_lowest_cose_node(cost, counter);
@@ -90,10 +82,12 @@ namespace GrokkingAlgorithm
 			iter_minCost = find_lowest_cose_node(cost, counter);
 		}
 
+		/* return result */
 		ret.second = cost["fin"];
 		ret.first.push_back("fin");
 		while (ret.first.back() != "start")
 			ret.first.push_back(parent[ret.first.back()]);
+
 		return ret;
 	}
 }
