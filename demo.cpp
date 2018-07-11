@@ -83,8 +83,71 @@ int main()
 	GrokkingAlgorithm::Ch5_HashTable();
 	*/
 
+	/*
 	// ==================== demo Chapter 6 -- Breadth First Search ==================
 	GrokkingAlgorithm::Ch6_BreadthFirstSearch();
+	*/
+	
+	// ==================== demo Chapter 7 -- Dijkstra Algorithm ====================
+	
+	std::map<std::string, std::map<std::string, int>> graph;
+	/* graph 1*/
+	graph["start"]["A"] = 5;
+	graph["start"]["B"] = 0;
+	graph["A"]["C"] = 15;
+	graph["A"]["D"] = 20;
+	graph["B"]["C"] = 30;
+	graph["B"]["D"] = 35;
+	graph["C"]["fin"] = 20;
+	graph["D"]["fin"] = 10;
+
+	///* graph 2*/
+	//graph["start"]["A"] = 6;
+	//graph["start"]["B"] = 2;
+	//graph["A"]["fin"] = 1;
+	//graph["B"]["A"] = 3;
+	//graph["B"]["fin"] = 5;
+
+	///* graph 3 */
+	//graph["start"]["b"] = 5;
+	//graph["start"]["c"] = 2;
+	//graph["b"]["d"] = 4;
+	//graph["b"]["e"] = 2;
+	//graph["c"]["b"] = 8;
+	//graph["c"]["e"] = 7;
+	//graph["d"]["fin"] = 3;
+	//graph["d"]["e"] = 6;
+	//graph["e"]["fin"] = 1;
+
+	///* graph 4 */
+	//graph["start"]["b"] = 10;
+	//graph["b"]["d"] = 20;
+	//graph["d"]["c"] = 1;
+	//graph["c"]["b"] = 1;
+	//graph["d"]["fin"] = 30;
+
+	///* graph 5 */
+	///* This is a cyclic graph with negative side, no more Dijkstra */
+	//graph["start"]["b"] = 2;
+	//graph["start"]["d"] = 2;
+	//graph["d"]["b"] = 2;
+	//graph["b"]["fin"] = 2;
+	//graph["b"]["e"] = 2;
+	//graph["e"]["d"] = -5;
+	//graph["e"]["fin"] = 2;
+
+	std::map<std::string, int> fin;
+	graph["fin"] = fin;
+
+	std::pair<std::vector<std::string>, int> ret;
+	ret = GrokkingAlgorithm::Ch7_Dijkstra(graph);
+	
+	size_t i = 0, dims = ret.first.size();
+	std::vector<std::string>::iterator iter;
+	std::cout << "Shortest route:" << std::endl;
+	for (iter = ret.first.begin(); i < dims - 1; ++i, ++iter)
+		std::cout << *iter << " <- ";
+	std::cout << *iter << std::endl << "Shortest distance:\t" << ret.second << std::endl;
 
 	return 0;
 }

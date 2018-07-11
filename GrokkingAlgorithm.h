@@ -28,6 +28,8 @@ namespace GrokkingAlgorithm
 	void Ch5_HashTable();
 
 	bool Ch6_BreadthFirstSearch();
+	
+	std::pair<std::vector<std::string>, int> Ch7_Dijkstra(std::map<std::string, std::map<std::string, int>> &graph);
 };
 
 #endif

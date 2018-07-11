@@ -24,4 +24,8 @@ Note:
 
 2018-07-02:	update Chapter_5
 
+2018-07-03: update Chapter_6
+
+2018-07-11: update Chapter_7
+
 more are on the way
