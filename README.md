@@ -30,7 +30,7 @@ Note:
 
 2018-07-12: update Chapter_8
 
-2018-07-12: update files, more clean NOW!
+2018-07-12: update files, more CLEAN now!
 
 more are on the way
 
