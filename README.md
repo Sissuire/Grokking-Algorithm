@@ -28,4 +28,10 @@ Note:
 
 2018-07-11: update Chapter_7
 
+2018-07-12: update Chapter_8
+
 more are on the way
+
+=====================================================
+
+The codes here are messy to some extent... I'll neaten them in a fews days.

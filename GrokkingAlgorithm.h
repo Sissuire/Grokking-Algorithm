@@ -1,6 +1,7 @@
 #ifndef GROKKING_ALGORITHM_H_
 #define GROKKING_ALGORITHM_H_
 
+#include <algorithm>
 #include <iostream>
 #include <string>
 #include <vector>
@@ -30,6 +31,8 @@ namespace GrokkingAlgorithm
 	bool Ch6_BreadthFirstSearch();
 	
 	std::pair<std::vector<std::string>, int> Ch7_Dijkstra(std::map<std::string, std::map<std::string, int>> &graph);
+
+	void Ch8_GreedyAlgorithm();
 };
 
 #endif
