@@ -42,7 +42,7 @@ more are on the way
 
 ### Ch-1, Introduction to Algorithms
 
-- Binary Search* for sorted sequence
+- Binary Search for sorted sequence
 
 ### Ch-2, Selection Sort
 
