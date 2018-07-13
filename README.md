@@ -46,7 +46,7 @@ more are on the way
 
 ### Ch-2, Selection Sort
 
-- Select the maximum/minimum each time ($\mathcal{O}(n^2)$)
+- Select the maximum/minimum each time
 
 ### Ch-3, Recursion
 
