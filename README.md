@@ -18,26 +18,6 @@ Note:
 
 =====================================================
 
-2018-06-29: This is the first day, update Chapter_1 & Chapter_2 & Chapter_3
-
-2018-06-30: update Chapter_4
-
-2018-07-02:	update Chapter_5
-
-2018-07-03: update Chapter_6
-
-2018-07-11: update Chapter_7
-
-2018-07-12: update Chapter_8
-
-2018-07-12: update files, more CLEAN now!
-
-2018-07-13: update Chapter_9
-
-more are on the way
-
-=====================================================
-
 ## Content
 
 ### Ch-1, Introduction to Algorithms
@@ -77,3 +57,9 @@ more are on the way
 - Through some instances for better understanding of DP, such as `Knapsack Problem`, `Longest Common Substring`, and `Longest Common Subsequence`. Learn to solve a hard problem by breaking it up into subproblems and solving those subproblems first (how to define and construct a suitable table for problems). 
 
 ### Ch-10, K-nearest Neighbors
+
+- A simple introduction to some machine learning methods (like K-nearest Neighbors, or Naive Bayes). **No code supplied here.**
+
+### Ch-11, Where to Go Next
+
+- A brief navigation for more algorithms for further reading. They are `Trees`,  `Inverted Indexes`, 'The Fourier Transform`, 'Parallel algorithms`, `MapReduce`, `Bloom Filters and HyperLogLog`, `The SHA Algorithms`, `Locality-Sensitive Hashing`, `Diffie-Hellman Key Exchange`, and `Linear Programming`. **No code supplied.**
