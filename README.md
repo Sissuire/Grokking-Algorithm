@@ -14,7 +14,14 @@ Also I did not see any of the official source code. So, this is not a c/cpp impl
 
 =====================================================
 
+## Usage
+
+** run `demo.cpp` **
+
+All instances for input can be found in `GrokkingAlgorithm.cpp`, and the implementation details are implemented in 'UtilsGrokkingAlgo.cpp`.
+
 Note:
+
 - Code are implemented with Visual Studio 2013 on Windows 10, and possible mistakes can be found with GCC complier on Linux. Just modified by yourself.
 
 =====================================================
@@ -64,3 +71,4 @@ Note:
 ### Ch-11, Where to Go Next
 
 - A brief navigation for more algorithms for further reading. They are `Trees`,  `Inverted Indexes`, 'The Fourier Transform`, 'Parallel algorithms`, `MapReduce`, `Bloom Filters and HyperLogLog`, `The SHA Algorithms`, `Locality-Sensitive Hashing`, `Diffie-Hellman Key Exchange`, and `Linear Programming`. **No code supplied.**
+
