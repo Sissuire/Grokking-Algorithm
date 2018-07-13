@@ -1,9 +1,10 @@
 # Grokking-Algorithm
-## c/cpp implementation on Grokking Algorithm
+
+**c/cpp implementation on Grokking Algorithm**
 
 It's a simple but funny book. [https://www.manning.com/books/grokking-algorithms](https://www.manning.com/books/grokking-algorithms)
 
-Thank [Yuci](https://github.com/yucicheung) for the book, and an english PDF file can be found on website.
+Thank [Yuci](https://github.com/yucicheung) for the book, and an English PDF file can be found on website.
 
 =====================================================
 
@@ -14,7 +15,7 @@ Also I did not see any of the official source code. So, this is not a c/cpp impl
 =====================================================
 
 Note:
-- Code are implemented with Visual Studio 2013 on Windows 10, and possible mistakes can be occur with GCC complier on Linux. Just modified by yourself.
+- Code are implemented with Visual Studio 2013 on Windows 10, and possible mistakes can be found with GCC complier on Linux. Just modified by yourself.
 
 =====================================================
 
