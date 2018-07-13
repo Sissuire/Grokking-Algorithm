@@ -16,7 +16,7 @@ Also I did not see any of the official source code. So, this is not a c/cpp impl
 
 ## Usage
 
-** run `demo.cpp` **
+**run `demo.cpp`**
 
 All instances for input can be found in `GrokkingAlgorithm.cpp`, and the implementation details are implemented in 'UtilsGrokkingAlgo.cpp`.
 
