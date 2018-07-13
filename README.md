@@ -46,7 +46,7 @@ more are on the way
 
 ### Ch-2, Selection Sort
 
-- Select the maximum/minimum each time (<a href="https://www.codecogs.com/eqnedit.php?latex=\mathcal{O}(n^2)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\mathcal{O}(n^2)" title="\mathcal{O}(n^2)" /></a>)
+- Select the maximum/minimum each time ($\mathcal{O}(n^2)$)
 
 ### Ch-3, Recursion
 
