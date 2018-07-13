@@ -54,7 +54,7 @@ more are on the way
 
 ### Ch-4, Quick Sort
 
-- An introduction to 'Divide & Conquer (D&C)', and many instances (Max Square, Sum, Quick Sort, and Merge Sort) are implemented
+- An introduction to `Divide & Conquer (D&C)`, and many instances (Max Square, Sum, Quick Sort, and Merge Sort) are implemented
 
 ### Ch-5, Hash Tables
 
