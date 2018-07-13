@@ -8,12 +8,12 @@ void GrokkingAlgorithm::runDemoChapter_1()
 {
 	// ========= demo Chapter 1 -- Binary Search =========
 	int array[] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 };
-	
+
 	std::cout << "\n =========================" << std::endl
 		<< " Demo for Chapter 1 -- Binary Search " << std::endl
 		<< " =========================" << std::endl;
 
-	std::cout<< "Original Data : " << std::endl;
+	std::cout << "Original Data : " << std::endl;
 	PrintData(array, 12);
 
 	std::cout << "Input an integer for search: " << std::endl;
@@ -77,7 +77,7 @@ void GrokkingAlgorithm::runDemoChapter_4()
 
 	/* Sum */
 	std::cout << std::endl << "solution for Sum " << std::endl;
-	
+
 	int array[9] = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
 	std::cout << "Original Data: ";
 	PrintData(array, 9);
@@ -200,7 +200,7 @@ void GrokkingAlgorithm::runDemoChapter_7()
 	graph4["d"]["fin"] = 30;
 
 	/* graph 5 */
- 	/* This is a cyclic graph with negative side, no more Dijkstra */
+	/* This is a cyclic graph with negative side, no more Dijkstra */
 	graph5["start"]["b"] = 2;
 	graph5["start"]["d"] = 2;
 	graph5["d"]["b"] = 2;
@@ -214,7 +214,7 @@ void GrokkingAlgorithm::runDemoChapter_7()
 
 	std::pair<std::vector<std::string>, int> ret1, ret2, ret3, ret4, ret5;
 	ret1 = GrokkingAlgorithm::Dijkstra_Ch7(graph1);
-	ret2 = GrokkingAlgorithm::Dijkstra_Ch7(graph2); 
+	ret2 = GrokkingAlgorithm::Dijkstra_Ch7(graph2);
 	ret3 = GrokkingAlgorithm::Dijkstra_Ch7(graph3);
 	ret4 = GrokkingAlgorithm::Dijkstra_Ch7(graph4);
 	ret5 = GrokkingAlgorithm::Dijkstra_Ch7(graph5);
@@ -285,4 +285,55 @@ void GrokkingAlgorithm::runDemoChapter_8()
 	return;
 }
 
-void GrokkingAlgorithm::runDemoChapter_9(){}
+void GrokkingAlgorithm::runDemoChapter_9()
+{
+	std::cout << "\n =========================" << std::endl
+		<< " Demo for Chapter 9 -- Dynamic Programming " << std::endl
+		<< " =========================" << std::endl;
+
+	/* Knapsack Problem */
+	int wt = 5;
+	std::map<std::string, std::pair<int, int> > info
+	{ { "Guitar", { 1, 1500 } }, { "Stereo", { 4, 3000 } },
+	{ "Laptop", { 3, 2000 } }, { "Iphone", { 1, 2000 } } };
+
+	std::pair<int, std::set<std::string>> ret = KnapsackProblem_Ch9(info, wt);
+	std::cout << "\nStealing things for value maximum" << std::endl
+		<< "The solution for Knapsack Problem with weight of " << wt << ":" << std::endl;
+	std::cout << "The maximum of value is:  $ " << ret.first << std::endl << "The optimal solution is:  ";
+	for (auto iter = ret.second.begin(); iter != ret.second.end(); ++iter)
+		std::cout << *iter << ", ";
+	std::cout << std::endl << std::endl;
+
+	int wt2 = 6;
+	std::map<std::string, std::pair<int, int>> info2
+	{ { "Water", { 3, 10 } }, { "Book", { 1, 3 } }, { "Food", { 2, 9 } },
+	{ "Jacket", { 2, 5 } }, { "Camera", { 1, 6 } } };
+
+	std::pair<int, std::set<std::string>> ret2 = KnapsackProblem_Ch9(info2, wt2);
+	std::cout << "Taking things to travel for value maximum" << std::endl
+		<< "The solution for Knapsack Problem with weight of " << wt2 << ":" << std::endl;
+	std::cout << "The maximum of value is:  $ " << ret2.first << std::endl << "The optimal solution is:  ";
+	for (auto iter = ret2.second.begin(); iter != ret2.second.end(); ++iter)
+		std::cout << *iter << ", ";
+	std::cout << std::endl << std::endl;
+
+	/* Longest Common Substring */
+	std::string str1("fished"), str2("abfisabshezzishecaahed");
+	std::pair<int, std::string> lcs = GrokkingAlgorithm::LongestCommonSubstring_Ch9(str1, str2);
+
+	std::cout << "Find the Longest Common Substring" << std::endl;
+	std::cout << "Input two strings as : \"" << str1 << "\" & \"" << str2 << "\"" << std::endl;
+	std::cout << "The Longest Common Substring is:  \"" << lcs.second << "\"" << std::endl;
+	std::cout << "The length is :  " << lcs.first << std::endl << std::endl;
+
+	/* Longest Common Subsequence */
+	std::string str3("fosh"), str4("fish");
+	int len = GrokkingAlgorithm::LongestCommonSubsequence_Ch9(str3, str4);
+
+	std::cout << "Find the Longest Common Subsequence" << std::endl;
+	std::cout << "Input two strings as : \"" << str3 << "\" & \"" << str4 << "\"" << std::endl;
+	std::cout << "The length of Longest Common Substring is:  " << len << std::endl << std::endl;
+
+	return;
+}

@@ -730,3 +730,169 @@ std::set<std::string> GrokkingAlgorithm::GreedyAlgorithm_Ch8(std::set<std::strin
 
 	return ret;
 }
+
+std::pair<int, std::set<std::string>> GrokkingAlgorithm::KnapsackProblem_Ch9(std::map<std::string, std::pair<int, int>> &info, int wt)
+{
+	/*
+	* ========== Knapsack Problem ==============
+	*
+	* to find an optimal solution for Knapsack Problem
+	*
+	* Params:
+	*		- info, a set of things' information: name (string), weight (int [0]), and its value (int [1]).
+	*		- wt, the whole package weight
+	*
+	* Out:
+	*		a pair of maximum value and its combination
+	*/
+
+	int dims = (int)info.size();
+
+	if (dims < 1 || wt < 1)
+		return std::pair < int, std::set<std::string> > { 0, std::set < std::string > {} };
+
+	/* preparation */
+	int mRows = dims + 1;
+	int nCols = wt + 1;
+	int i, j;
+	int **table = (int **)malloc(mRows * sizeof(int *));
+	for (i = 0; i != mRows; ++i)
+		table[i] = (int *)malloc(nCols * sizeof(int));
+
+	for (i = 0; i != mRows; ++i)
+		for (j = 0; j != nCols; ++j)
+			table[i][j] = 0;
+
+	i = 0;
+	std::vector<std::string> things(dims);
+	for (auto &elem : info)
+		things[i++] = elem.first;
+
+	/* run */
+	int val, weight0, value0;
+	std::vector<std::set<std::string>> prevLine(nCols), currLine(nCols);
+	for (i = 1; i != mRows; ++i)
+	{
+		weight0 = info[things[i - 1]].first;
+		value0 = info[things[i - 1]].second;
+
+		for (j = 1; j != weight0; ++j)
+		{
+			table[i][j] = table[i - 1][j];
+			currLine[j] = prevLine[j];
+		}
+
+		for (j = weight0; j != nCols; ++j)
+		{
+			val = value0 + table[i - 1][j - weight0];
+			if (val > table[i - 1][j])
+			{
+				/* update */
+				table[i][j] = val;
+				currLine[j] = prevLine[j - weight0];
+				currLine[j].insert(things[i - 1]);
+			}
+			else
+			{
+				table[i][j] = table[i - 1][j];
+				currLine[j] = prevLine[j];
+			}
+		}
+
+		prevLine = currLine;
+		for (auto &elem : currLine)
+			elem.clear();
+	}
+
+	val = table[dims][wt];
+
+	/* free memory */
+	for (i = 0; i != dims; ++i)
+		free(table[i]);
+	free(table);
+	
+	return{ val, prevLine[wt] };
+}
+
+std::pair<int, std::string> GrokkingAlgorithm::LongestCommonSubstring_Ch9(std::string str1, std::string str2)
+{
+	/*
+	* ========== Longest Common Substring ==============
+	*
+	* solution to find the longest common substring
+	*
+	* Params:
+	*		- str1 | str2, two strings 
+	*
+	* Out:
+	*		a pair of length and the corresponding substring
+	*/
+
+	int m = (int)str1.size() + 1, n = (int)str2.size() + 1;
+
+	if (std::min<int>(m, n) < 2)
+		return{ 0, "" };
+
+	std::vector<std::vector<int>> table(m, std::vector<int>(n, 0));
+
+	/* construct table */
+	int i, j;
+	for (i = 1; i != m; ++i)
+		for (j = 1; j != n; ++j)
+		{
+			if (str1[i - 1] == str2[j - 1])
+				table[i][j] = table[i - 1][j - 1] + 1;
+			else
+				table[i][j] = 0;
+		}
+
+	/* find maximum */
+	int val = 0;
+	int pos = 0;
+	for (i = 1; i != m; ++i)
+		for (j = 1; j != n; ++j)
+		{
+			if (val < table[i][j])
+			{
+				val = table[i][j];
+				pos = i - 1;
+			}
+		}
+
+	return{ val, str1.substr(pos - val + 1, val) };
+}
+
+int GrokkingAlgorithm::LongestCommonSubsequence_Ch9(std::string str1, std::string str2)
+{
+	/*
+	* ========== Longest Common Subsequence ==============
+	*
+	* solution to find the length of longest common subsequence
+	*
+	* Params:
+	*		- str1 | str2, two strings
+	*
+	* Out:
+	*		a length of the longest subsequence
+	*/
+
+	int m = (int)str1.size() + 1, n = (int)str2.size() + 1;
+
+	if (std::min<int>(m, n) < 2)
+		return 0;
+
+	std::vector<std::vector<int>> table(m, std::vector<int>(n, 0));
+
+	/* construct table */
+	int i, j;
+	for (i = 1; i != m; ++i)
+		for (j = 1; j != n; ++j)
+		{
+			if (str1[i - 1] == str2[j - 1])
+				table[i][j] = table[i - 1][j - 1] + 1;
+			else
+				table[i][j] = std::max<int>(table[i - 1][j], table[i][j - 1]);
+		}
+
+	return table[m - 1][n - 1];
+}

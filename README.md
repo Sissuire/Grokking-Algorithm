@@ -32,5 +32,48 @@ Note:
 
 2018-07-12: update files, more CLEAN now!
 
+2018-07-13: update Chapter_9
+
 more are on the way
 
+=====================================================
+
+## Content
+
+### Ch-1, Introduction to Algorithms
+
+- Binary Search* for sorted sequence
+
+### Ch-2, Selection Sort
+
+- Select the maximum/minimum each time ($\mathcal{O}(n^2)$)
+
+### Ch-3, Recursion
+
+- Recursive implementation of Fibonacci numbers
+
+### Ch-4, Quick Sort
+
+- An introduction to 'Divide & Conquer (D&C)', and many instances (Max Square, Sum, Quick Sort, and Merge Sort) are implemented
+
+### Ch-5, Hash Tables
+
+- An introduction to Hash tables, for quick search
+
+### Ch-6, Breadth-First Search
+
+- Apply BFS to find the shortest route (without weight side, like personal relation network) with 'queue'
+
+### Ch-7, Dijkstra's Algorithm
+
+- An algorithm to find the shortest route, suit to weighted directed acyclic graph with non-negative side
+
+### Ch-8, Greedy Algorithms
+
+- Find a local optimal solution, approximating global solution, for NP problem. Select the local optimal solution at each step.
+
+### Ch-9, Dynamic Programming
+
+- Through some instances for better understanding of DP, such as Knapsack Problem, Longest Common Substring, and Longest Common Subsequence. Learn to solve a hard problem by breaking it up into subproblems and solving those subproblems first (how to define and construct a suitable table for problems). 
+
+### Ch-10, K-nearest Neighbors

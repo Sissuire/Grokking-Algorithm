@@ -38,6 +38,9 @@ private:
 	std::pair<bool, std::string> BreadthFirstSearch_Ch6(std::map<std::string, std::vector<std::string>> &relationNet, std::set<std::string> &seller);
 	std::pair<std::vector<std::string>, int> Dijkstra_Ch7(std::map<std::string, std::map<std::string, int>> &graph);
 	std::set<std::string> GreedyAlgorithm_Ch8(std::set<std::string> &states_needed, std::map<std::string, std::set<std::string>> &stations);
+	std::pair<int, std::set<std::string>> KnapsackProblem_Ch9(std::map<std::string, std::pair<int, int>> &info, int wt);
+	std::pair<int, std::string> LongestCommonSubstring_Ch9(std::string str1, std::string str2);
+	int LongestCommonSubsequence_Ch9(std::string str1, std::string str2);
 };
 
 template<typename T> void PrintData(const T &data)
