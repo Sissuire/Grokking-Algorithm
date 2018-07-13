@@ -1,3 +1,6 @@
+// Yongxu Liu, 2018-07-13
+// https://github.com/Sissuire/Grokking-Algorithm
+
 #include "GrokkingAlgorithm.h"
 
 int main()
