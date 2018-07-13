@@ -46,7 +46,7 @@ more are on the way
 
 ### Ch-2, Selection Sort
 
-- Select the maximum/minimum each time ($\mathcal{O}(n^2)$)
+- Select the maximum/minimum each time (<a href="https://www.codecogs.com/eqnedit.php?latex=\mathcal{O}(n^2)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\mathcal{O}(n^2)" title="\mathcal{O}(n^2)" /></a>)
 
 ### Ch-3, Recursion
 
@@ -54,7 +54,7 @@ more are on the way
 
 ### Ch-4, Quick Sort
 
-- An introduction to `Divide & Conquer (D&C)`, and many instances (Max Square, Sum, Quick Sort, and Merge Sort) are implemented
+- An introduction to `Divide & Conquer (D&C)`, and many instances (`Max Square`, `Sum`, `Quick Sort`, and `Merge Sort`) are implemented
 
 ### Ch-5, Hash Tables
 
@@ -62,7 +62,7 @@ more are on the way
 
 ### Ch-6, Breadth-First Search
 
-- Apply BFS to find the shortest route (without weight side, like personal relation network) with 'queue'
+- Apply BFS to find the shortest route (without weight side, like personal relation network) with `queue`
 
 ### Ch-7, Dijkstra's Algorithm
 
@@ -74,6 +74,6 @@ more are on the way
 
 ### Ch-9, Dynamic Programming
 
-- Through some instances for better understanding of DP, such as Knapsack Problem, Longest Common Substring, and Longest Common Subsequence. Learn to solve a hard problem by breaking it up into subproblems and solving those subproblems first (how to define and construct a suitable table for problems). 
+- Through some instances for better understanding of DP, such as `Knapsack Problem`, `Longest Common Substring`, and `Longest Common Subsequence`. Learn to solve a hard problem by breaking it up into subproblems and solving those subproblems first (how to define and construct a suitable table for problems). 
 
 ### Ch-10, K-nearest Neighbors
